@@ -111,7 +111,7 @@ console.log('học sinh có chữ a trong tên: ', studentA);
 
 //28♥️♥️♥️ trả về học sinh cá biệt có họ là “Do”
 let studentDo = students.filter(student => {
-    return student.lastName.indexOf('Do') != -1;    
+    return student.lastName.split(' ')[0].indexOf('Do') != -1;    
 })
 console.log('học sinh có họ Do', studentDo);
 
