@@ -109,5 +109,3 @@ let studentDo = students.filter(student => {
 console.log('học sinh có họ Do', studentDo);
 
 //29♥️♥️♥️ sắp xếp mảng theo bảng chữ cái của firstName
-let field = 'firstName';
-console.log('sắp xếp theo tên: ',students.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString())));
