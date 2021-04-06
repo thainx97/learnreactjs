@@ -88,12 +88,19 @@ students = [
         lastName: "Nguyen Nhat"
     }
 ]
-// chuyển tên và họ về viết hoa kí tự đầu (chưa xét trường hợp họ viết thường :v ex: Phan thi Thao)
+// chuyển tên và họ về viết hoa kí tự đầu
+function chuanHoaHoTen(val) {
+    let convertToArray = val.toLowerCase().split(' ');
+    let result = convertToArray.map(word => {
+       return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    return result.join(' ');
+}
 let studentUcFirstNames = students.map((student, index) => {
-    return students[index].firstName = student.firstName.charAt(0).toUpperCase() + student.firstName.slice(1).toLowerCase();
+    return student.firstName = chuanHoaHoTen(students[index].firstName);
 })
 let studentUcLastNames = students.map((student, index) => {
-    return students[index].lastName = student.lastName.charAt(0).toUpperCase() + student.lastName.slice(1);
+    return student.lastName = chuanHoaHoTen(students[index].lastName);
 })
 console.log('chuẩn hóa tên: ', students);
 // trả về học viên có tên tồn tại chữ cái “a” hoặc “A” và tên dài hơn hoặc bằng 3 ký tự.
